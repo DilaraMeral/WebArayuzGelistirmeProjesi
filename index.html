@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobil cihazlar da düzgün görünüm sağlayabilmesi için -->
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    
+    <!--
+     - primary meta tags 
+    -->
+    
+    <title>Crispy - Chicken Burgers</title>
+    <meta name="title" content="Crispy - Chicken Burgers">
+    <meta name="description" content="This is a food html website for class project.">
+
+    <!--
+     - favicon 
+    -->
+
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+    <!--
+     - google fontlarını yükleyebilmek için linkler
+    -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!--
+    - custom css link      
+    -->    
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!--
+    - preload images
+    -->
+
+    <link rel="preload" as="image"  href="./assets/images/hero-1.jpg">
+    <link rel="preload" as="image"  href="./assets/images/hero-shape-1.png">
+    <link rel="preload" as="image"  href="./assets/images/hero-shape-2.png">
+
+    <!-- ikonların yüklenebilmesi için-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    
+    <!--Sweet Alert penceresi için kütüphane importu yaptık.-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</head>
+
+<body id="top">
+
+    <!--
+    - #HEADER
+    -->
+
+    <!-- navigasyon çuğunu başlatmak -->
+    <header class="header" data-header>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="./assets/images/logo.svg" width="130" height="45" alt="Crispy home">
+            </a>
+
+            <nav class="navbar" data-navbar>
+
+                <!-- menüyü kapatmak için buton -->
+                <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                    <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                </button>
+
+                <a href="#" class="nav-logo">
+                    <img src="./assets/images/logo.svg" width="175" height="61" alt="Crispy home">
+                </a>
+
+                <ul class="navbar-list">
+
+                    <li class="navbar-item">
+                        <a href="#home" class="navbar-link" data-nav-link>Home</a>
+                     </li>
+
+                     <li class="navbar-item">
+                        <a href="#menu" class="navbar-link" data-nav-link>Menu</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="#popularfoods" class="navbar-link" data-nav-link>Popular Foods</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="#workinghours" class="navbar-link" data-nav-link>Working Hours</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="#communication" class="navbar-link" data-nav-link>Communication</a>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+                <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+            </button>
+
+            <div class="overlay" data-overlay data-nav-toggler></div>
+        </div>
+
+    </header>
+
+    <main>
+        <article>
+            <!--
+              -HERO
+            -->
+
+            <section id="home" class="hero" aria-label="home">
+                <div class="container">
+
+                    <div class="hero-content">
+
+                        <h1 class="h1 title hero-title" style="font-size: 30px;" >    Crispy Chicken Burgers</h1>
+
+                        <p class="section-text" style="font-size: 18px;">
+                            Welcome to CRISPY CHICKEN  where fast meets delicious!
+                            We serve fresh burgers, crispy fries, and tasty snacks every day.
+                            Perfect for a quick bite or a casual meal with friends.
+                            Fast food, full flavor  that's our promise!
+                        </p>
+                        <div class="wrapper">
+                            <img src="./assets/images/down-arrow.png" width="40" height="40" alt="arrow" class="arrow">
+                            <a href="#reservation" class="btn1">
+                                <span class="span">Make A Reservation</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <figure class="hero-banner img-holder" style="--width: 632; --height: 606;">
+                        <img src="./assets/images/hero-1.jpg" width="632" height="606" alt="hero-banner"
+                        class="img-cover">
+                    </figure>
+
+                    <img src="./assets/images/hero-shape-1.png" width="490" height="455" alt="shape"
+                    class="shape shape-1">
+
+                    <img src="./assets/images/hero-shape-2.png" width="512" height="512" alt="shape"
+                    class="shape shape-2">
+
+                    <img src="./assets/images/line-1.png" width="630" height="506" alt="line"
+                    class="shape shape-3">
+
+                </div>
+            </section>
+
+            <!--
+              - POPULAR
+            -->
+
+            <section id="menu" class="section popular" aria-labelledby="popular-label">
+  <div class="container">
+    <p class="section-subtitle text-center" id="popular-label">OUR MENU</p>
+    <h2 class="h2 title section-title text-center">Food Categories On The Menu.</h2>
+
+    <ul class="grid list">
+      <!-- Pizza Kartı -->
+      <li>
+        <div class="popular-card">
+          <figure class="card-icon">
+            <img src="./assets/images/icon-1.png" width="85" height="85" loading="lazy" alt="Pizza">
+          </figure>
+          <h3 class="h3 title card-title">Pizza</h3>
+          <a href="#" class="card-btn" onclick="openModalWithCategory('pizza'); return false;" aria-label="View pizza products">
+            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+          </a>
+        </div>
+      </li>
+
+      <!-- Burger Kartı -->
+      <li>
+        <div class="popular-card">
+          <figure class="card-icon">
+            <img src="./assets/images/icon-2.png" width="85" height="85" loading="lazy" alt="Burger">
+          </figure>
+          <h3 class="h3 title card-title">Burger</h3>
+          <a href="#" class="card-btn" onclick="openModalWithCategory('hamburger'); return false;" aria-label="View burger products">
+            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+          </a>
+        </div>
+      </li>
+
+      <!-- Chicken Kartı -->
+      <li>
+        <div class="popular-card">
+          <figure class="card-icon">
+            <img src="./assets/images/icon-6.png" width="85" height="85" loading="lazy" alt="Chicken">
+          </figure>
+          <h3 class="h3 title card-title">Chicken</h3>
+          <a href="#" class="card-btn" onclick="openModalWithCategory('chicken'); return false;" aria-label="View chicken products">
+            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Modal Kısmı -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span id="closeModalBtn" class="close">&times;</span>
+    <h2 id="modalTitle">MENU</h2>
+    <ul id="productList"></ul>
+  </div>
+</div>
+
+            <!--
+              - #MENU
+            -->
+
+            <section id="popularfoods" class="section menu" aria-labelledby="menu-label">
+                <div class="container">
+                    <p class="section-subtitle text-center" id="menu-label">Best Food Menu</p>
+
+                    <h2 class="title h2 section-title text-center">
+                        Choose From Our Best Menus
+                    </h2>
+
+                    <div class="section-wrapper">
+                        <figure class="menu-banner img-holder" style="--width: 540 ; --height: 790;">
+                            <img src="./assets/images/menu-banner.jpg" width="540" height="790"
+                            loading="lazy" alt="menu banner"
+                            class="img-cover">
+                        </figure>
+
+                        <ul class="grid-list">
+                            <li class="menu-item">
+                                <figure class="item-banner">
+                                    <img src="./assets/images/menu-1.png" width="150" height="150"
+                                    loading="lazy" alt="Hamburger">
+                                </figure>
+
+                                <div class="item-content">
+                                    <div class="title-wrapper">
+  <span class="item-name">Smoky Inferno</span>
+  <span class="price">350 TL</span>
+</div>
+
+
+                                    <p class="menu-text">
+                                        
+                                    Beef special spicy meatballs, Lettuce, Tomato, Cheddar cheese, Beef bacon
+                                    </p>
+
+                                    <div class="rating-wrapper">
+
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+
+                                    </div>
+                                    
+                                </div>
+                            </li>
+
+                            <li class="menu-item">
+                                <figure class="item-banner">
+                                    <img src="./assets/images/menu-2.png" width="150" height="150"
+                                    loading="lazy" alt="Pizza">
+                                </figure>
+
+                                <div class="item-content">
+                                    <div class="title-wrapper">
+  <span class="item-name">Forest Flame Pizza</span>
+  <span class="price">400 TL</span>
+</div>
+
+
+                                    <p class="menu-text">
+                                        
+                                    Sausage, Red pepper,Cheese, Mushroom
+                                    </p>
+
+                                    <div class="rating-wrapper">
+
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+
+                                    </div>
+                                    
+                                </div>
+                            </li>
+
+                            <li class="menu-item">
+                                <figure class="item-banner">
+                                    <img src="./assets/images/menu-3.png" width="150" height="150"
+                                    loading="lazy" alt="Baked Chicken Wings">
+                                </figure>
+
+                                <div class="item-content">
+                                    <div class="title-wrapper">
+  <span class="item-name">Baked Chicken Wings</span>
+  <span class="price">325 TL</span>
+</div>
+
+
+                                    <p class="menu-text">
+                                        
+                                    Chicken wings, Special crispy chicken sauce
+                                    </p>
+
+                                    <div class="rating-wrapper">
+
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+
+                                    </div>
+                                    
+                                </div>
+                            </li>
+
+                            <li class="menu-item">
+                                <figure class="item-banner">
+                                    <img src="./assets/images/menu-4.png" width="150" height="150"
+                                    loading="lazy" alt="Seafood Pizza">
+                                </figure>
+
+                                <div class="item-content">
+                                    <div class="title-wrapper">
+  <span class="item-name">Seafood Pizza</span>
+  <span class="price">450 TL</span>
+</div>
+
+
+                                    <p class="menu-text">
+                                        
+                                    Shrimp, Crab, Cheddar cheese, Pizza sauce
+                                    </p>
+
+                                    <div class="rating-wrapper">
+
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+
+                                    </div>
+                                    
+                                </div>
+                            </li>
+
+
+                            
+                        </ul>
+            
+                    </div>
+                </div>
+            </section>
+
+
+            <!--
+              - #SCHEDULE
+            -->
+
+            <section id="workinghours" class="section schedule" aria-labelledby="schedule-label">
+                <div class="container">
+
+                    <div class="schedule-content">
+
+                        <p class="section-subtitle" id="schedule-label">Working Hour</p>
+
+                        <h2 class="h2 title section-title">
+                            Enjoy Our Foods From 6 Days In a Week
+                        </h2>
+
+                        <ul class="schedule-list">
+
+                            <li class="schedule-item">
+                                
+                                <p class="h4 title">Monday - Friday</p>
+
+                                <div class="separator"></div>
+                                <div class="time title">9 A.M - 6 P.M</div>
+
+                            </li>
+
+                            <li class="schedule-item">
+                                
+                                <p class="h4 title">Saturday</p>
+
+                                <div class="separator"></div>
+                                <div class="time title">10 A.M - 5 P.M</div>
+
+                            </li>
+
+                            <li class="schedule-item">
+                                
+                                <p class="h4 title">Sunday</p>
+
+                                <div class="separator"></div>
+                                <div class="time title">Closed</div>
+
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="schedule-banner">
+                        <figure class="img-holder">
+                            <img src="./assets/images/schedule-banner.jpg" width="960" height="640" 
+                            loading="lazy" alt="schedule-banner" class="img-cover">
+                        </figure>
+                    </div>
+
+
+                </div>
+            </section>
+
+            <!--
+              - #RESERVATION
+            -->
+
+            <section id="reservation" class="section reservation" aria-labelledby="reservation-label">
+                <div class="container">
+
+                    <figure class="reservation-banner img-holder" style="--width: 630; --height: 730;">
+                        <img src="./assets/images/reservation-banner.jpg" width="630" height="730"
+                        loading="lazy"
+                        alt="Reservation banner" class="img-cover">
+                    </figure>
+
+                    <div class="reservation-content">
+
+                        <p class="section-subtitle" id="reservation-label">Booking Table</p>
+
+                        <h2 class="h2 title section-title">Make A Reservation</h2>
+
+                        <form action="./index.html" method="get" class="booking-form">
+
+                         <div class="input-wrapper">
+  <label for="name">Name-Surname</label>
+  <input type="text" name="name" id="name" placeholder="Name-Surname" autocomplete="off" class="input-field">
+  <ion-icon name="person-outline"></ion-icon>
+</div>
+
+
+                            <div class="input-wrapper">
+  <label for="phone">Mobile Number</label>
+  <input type="text" name="phone" id="phone" placeholder="Mobile Number" autocomplete="off" class="input-field">
+  <ion-icon name="call-outline"></ion-icon>
+</div>
+
+
+                            <div class="input-wrapper">
+  <input type="date" name="date" id="date" class="input-field" required>
+  <label for="date">Reservation Date</label>
+  
+</div>
+
+<div class="input-wrapper">
+  <input type="time" name="time" id="time" class="input-field"
+         min="09:00" max="17:00" required>
+  <label for="time">Reservation Time</label>
+  
+</div>
+
+
+
+                            <button type="button" class="btn2" onclick="validateReservation()">
+                                <span class="span">Make A Reservation</span>
+                            </button>
+
+
+                        </form>
+                    </div>
+
+                    <img src="./assets/images/line-1.png" width="630" height="506" loading="lazy"
+                    alt="shape" class="shape">
+
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+
+    <!--
+      -#FOOTER
+    -->
+
+    <footer id="communication" class="footer">
+
+        <div class="section footer-top">
+            <div class="container">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="./assets/images/logo.svg" width="170" height="61" loading="lazy"
+                        alt="Crispy home">                        
+                    </a>
+
+                    <p class="footer-text">
+                        You can send an e-mail to contact our restaurant.
+                    </p>
+
+                   <a href="https://mail.google.com/mail/?view=cm&to=info@crispy.com&su=Rezervasyon&body=Merhaba, bir masa rezervasyonu yapmak istiyorum." 
+   target="_blank" class="mail-link">
+  info@crispy.com
+  <ion-icon name="arrow-forward-outline"></ion-icon>
+</a>
+
+
+                </div>
+                    
+                <ul class="footer-list">
+  <li>
+    <p class="list-subtitle">
+        Call Us:
+    </p>
+    <p class="call-text">
+        <img src="./assets/images/phone.png" alt="Phone" class="icon-inline">
+        +90 123 456 78 90</p>
+  </li>
+
+  <li>
+    <p class="list-subtitle">
+        Location:
+    </p>
+    <address class="contact-text">
+         <img src="./assets/images/location.png" alt="Location" class="icon-inline">
+      Gazi Üniversitesi Merkez Kampüs içi B Blok yanı
+    </address>
+  </li>
+</ul>
+
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+
+                <p class="copyright text-center">
+                    &copy; 2025 ProjeOdevi
+                </p>
+
+            </div>
+        </div>
+
+    </footer>
+
+
+    
+    <!--
+      -#BACK TO TOP 
+    -->
+
+    <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+        <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+    </a>
+
+
+    <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- custom js -->
+<script src="./assets/js/script.js"></script>
+
+
+    <!--
+    - ionicon link 
+    -->
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+</html>
